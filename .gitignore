@@ -1,0 +1,37 @@
+# Airflow
+logs/
+*.log
+*.pid
+*.pyc
+__pycache__/
+airflow.db
+standalone_admin_password.txt
+webserver_config.py
+
+# Docker
+*.env
+.env
+secrets/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Docker volumes
+volumes/
+data/

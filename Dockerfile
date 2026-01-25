@@ -1,0 +1,20 @@
+FROM apache/airflow:2.7.0
+
+# Установите зависимости для Apple Silicon
+FROM apache/airflow:2.7.0
+
+USER root
+
+# Установите системные зависимости
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    gcc \
+    python3-dev \
+    libpq-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+USER airflow
+
+# Установите Python пакеты
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
