@@ -19,7 +19,7 @@ def json_to_postgres():
 with DAG(
     'pets_to_postgres',
     start_date=datetime(2024, 1, 1),
-    schedule_interval='@once',  # Запустить один раз
+    schedule_interval='@once',
     catchup=False,
 ) as dag:
     
