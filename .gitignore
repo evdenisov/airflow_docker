@@ -1,37 +1,35 @@
 # Airflow
 logs/
 *.log
-*.pid
-*.pyc
-__pycache__/
 airflow.db
-standalone_admin_password.txt
-webserver_config.py
 
-# Docker
-*.env
-.env
-secrets/
+# БОЛЬШИЕ ФАЙЛЫ - НЕ добавлять в git!
+*.csv
+*.json
+*.ipynb
+*.parquet
+
+# Временные файлы Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Папки с данными
+data/
+dags/data/
+
+# Временные Python файлы
+__pycache__/
+*.pyc
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
 # OS
 .DS_Store
-Thumbs.db
 
-# Python
+# Python virtual envs
 venv/
 env/
-*.egg-info/
-dist/
-build/
-.pytest_cache/
-
-# Docker volumes
-volumes/
-data/
